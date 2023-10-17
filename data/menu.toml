@@ -2,18 +2,15 @@
 title = "Info"
 
   [[entries.entries]]
-  title = "Dette er hjemmesiden til Emma Eilefsen Glenna"
-
-  [[entries.entries]]
   title = "Sosial Media"
 
-  [[entries.entries.entries]]
-  title = "GitHub"
-  url = "https://github.com/eilefsen"
+      [[entries.entries.entries]]
+      title = "GitHub"
+      url = "https://github.com/eilefsen"
 
-  [[entries.entries.entries]]
-  title = "LinkedIn"
-  url = "https://www.linkedin.com/in/emma-eilefsen-glenna-b56476278/"
+      [[entries.entries.entries]]
+      title = "LinkedIn"
+      url = "https://www.linkedin.com/in/emma-eilefsen-glenna-b56476278/"
 
   [[entries.entries]]
   title = "RSS"

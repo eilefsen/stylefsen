@@ -3,19 +3,19 @@
 
 name = "no-style-please"
 license = "MIT"
-licenselink = "https://github.com/Masellum/hugo-theme-nostyleplease/blob/main/LICENSE"
-description = "a (nearly) no-CSS, fast, minimalist Hugo theme ported from riggraz/no-style-please."
-homepage = "https://github.com/Masellum/hugo-theme-nostyleplease"
+licenselink = "https://github.com/eilefsen/hugo-theme-nostyleplease/blob/main/LICENSE"
+description = "a (nearly) no-CSS, fast, minimalist Hugo theme forked from Masellum/nostyleplease."
+homepage = "https://github.com/eilefsen/hugo-theme-nostyleplease"
 tags = ["blog", "minimalist"]
 features = []
 min_version = "0.41.0"
 
 [author]
-  name = "Masellum"
-  homepage = "Masellum.github.io"
+  name = "Emma Eilefsen Glenna"
+  homepage = "eilefsen.no"
 
 # If porting an existing theme
 [original]
   name = "riggraz"
-  homepage = "https://riggraz.dev/"
-  repo = "https://github.com/riggraz/no-style-please"
+  homepage = "Masellum.github.io"
+  repo = "https://github.com/Masellum/hugo-theme-nostyleplease"

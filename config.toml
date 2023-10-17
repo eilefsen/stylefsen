@@ -1,15 +1,15 @@
 [module]
-  [module.hugoVersion]
-    extended=true
-    min = "0.41.0"
+    [module.hugoVersion]
+        extended=true
+        min = "0.41.0"
 
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.parser]
-      [markup.goldmark.parser.attribute]
-        block = true
-        title = true
-  [markup.highlight]
+    [markup.goldmark]
+        [markup.goldmark.parser]
+            [markup.goldmark.parser.attribute]
+                block = true
+                title = true
+[markup.highlight]
     anchorLineNos = false
     codeFences = true
     guessSyntax = false
@@ -23,13 +23,15 @@
     noHl = false
     style = 'rrt'
     tabWidth = 4
-  [markup.tableOfContents]
+[markup.tableOfContents]
     startLevel = 2
     endLevel = 3
     ordered = false
 
 [params]
-  [params.theme_config]
-    appearance = "auto"
-    back_home_text = ".."
-    date_format = "2006-01-02"
+    description = "Dette er hjemmesiden til Emma Eilefsen Glenna"
+    [params.theme_config]
+        appearance = "auto"
+        back_home_text = ".."
+        date_format = "2006-01-02"
+        show_description = true
