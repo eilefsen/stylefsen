@@ -1,63 +1,183 @@
-// -------------- THEME SWITCHER -------------- //
-@mixin dark-appearance {
-    filter: invert(1);
-    img {
-        filter: invert(1);
+$colorYellow: #F9D949;
+$colorRed: #F45050;
+$colorNavy: #3C486B;
+$colorLightNavy:  #6476a9;
+$colorLightestNavy:  #8593bb;
+$colorWhite: #F0F0F0;
+$colorLightGrey: #E3E3E3;
+$colorGrey: #979797;
+$colorDarkGrey: #656565;
+$colorDarkGreen: #3D8361;
 
-        &.ioda { filter: invert(0); }
+$colorLight: $colorWhite;
+$colorLightDull: $colorDarkGrey;
+$colorDarkDull:  $colorLightestNavy;
+$colorDark: $colorNavy;
+$colorAccentLight: $colorYellow;
+$colorAccentDark: $colorRed;
+$colorAccentDark2: $colorDarkGreen;
+
+// Default to light mode
+
+html, body {
+    background: $colorLight;
+    color:      $colorDark;
+    border-color: $colorDark;
+}
+a {
+    color: $colorAccentDark;
+    &:visited {
+        color: $colorAccentDark;
+    }
+    &:hover {
+        color: $colorAccentDark2;
+    }
+}
+pre {
+    background: $colorDark;
+}
+code {
+    background: $colorLight;
+    color: $colorDark;
+}
+.date {
+    color: $colorLightDull;
+}
+
+// select dark mode if browser specifies it
+
+@media (prefers-color-scheme: dark) {
+    html, body {
+        background: $colorDark;
+        color:      $colorLight;
+        border-color: $colorLight;
+    }
+    a {
+        color: $colorAccentLight;
+        &:visited {
+            color: $colorAccentLight;
+        }
+        &:hover {
+            color: $colorAccentDark !important;
+        }
+    }
+    pre {
+        background: $colorLight;
+    }
+    code {
+        background: $colorDark;
+        color: $colorLight;
+
+    }
+    .date {
+        color: $colorDarkDull;
     }
 }
 
-body[a="dark"] { @include dark-appearance; }
-
-
-@media (prefers-color-scheme: dark) {
-    body[a="auto"] { @include dark-appearance; }
-}
 // -------------------------------------------- //
 
-// bg color is also needed in html in order to
-// block body's background propagation
-// see: https://stackoverflow.com/a/61265706
-html, body { background: white; }
+html {
+    height: 100%;
+}
 
-html { height: 100%; }
+* {
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    color: black;
+    padding-top: 3rem;
     font-family: monospace;
-    font-size: 16px;
+    font-size: 24px;
     line-height: 1.4;
-    margin: 0;
     min-height: 100%;
     overflow-wrap: break-word;
 }
 
-.post-meta { text-align: right; }
-
-h2, h3, h4, h5, h6 { margin-top: 3rem; }
-
-hr { margin: 2rem 0; }
-
-p { margin: 1rem 0; }
-
-li { margin: 0.4rem 0; }
-
-a {
-    text-decoration-color: #575757;
+.post-meta {
+    text-align: left;
+    margin-top: -1.7rem;
+    padding-left: 0.4rem;
 }
 
-*:target { background: yellow; }
+.head-links {
+    font-size: 1.5rem;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
-.w {
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
+.flex-grid {
+    display: flex;
+}
+
+.description {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.round-border {
+    border: 0.1rem solid;
+    border-radius: 0.5rem;
+}
+
+.postTitle {
+    font-size: 2rem;
+}
+
+.content {
+    @extend .round-border;
+    padding: 1rem;
+    width: auto;
 }
 
 .toc {
-    border: thin solid black;
+    @extend .round-border;
     padding: 1rem;
+    padding-bottom: 1.5rem;
+    width: auto;
+}
+
+.vertical-pad {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.size {
+    width: 37rem;
+}
+
+.date {
+    font-size: 1.1rem;
+
+}
+
+.mainTitle {
+    font-size: 3rem;
+    text-align: center;
+}
+
+h1 {
+    font: inherit;
+}
+
+h2, h3, h4, h5, h6 {
+    font: inherit;
+}
+
+p {
+    @extend .vertical-pad;
+    font-size: 1rem;
+}
+
+ul {
+    padding-left: 3rem;
+    padding-right: 1rem;
+    justify-self: center;
 }
 
 hr {
@@ -69,22 +189,21 @@ hr {
 }
 
 pre {
-    background: black;
     padding: 1em;
     overflow-x: auto; /* Fix pre content overflowing parent without scroll bar */
 }
 
-table { width: 100%; }
+table {
+    width: 100%;
+}
 
 table, th, td {
-    border: thin solid black;
+    border: thin solid;
     border-collapse: collapse;
     padding: 0.4rem;
 }
 
 code {
-    color: white;
-    background: black; 
     font-size: 80%;
     padding: 0.1em 0.2em;
     font-size: 90%;
@@ -99,16 +218,13 @@ code.has-jax {
 
 blockquote {
     font-style: italic;
-    border: thin solid black;
+    border: thin solid;
     padding: 1rem;
-
-    p { margin: 0; }
 }
 
 img {
     max-width: 100%;
     display: block;
-    margin: 0 auto;
 }
 
 figcaption {

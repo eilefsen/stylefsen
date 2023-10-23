@@ -1,12 +1,25 @@
 {{ define "main" }}
 
 <header>
-    <h1>{{ $.Site.Title }}</h1>
+    <h1 class="mainTitle">{{ $.Site.Title }}</h1>
     {{- if $.Site.Params.theme_config.show_description -}}
-        <p>{{ $.Site.Params.description }}</p>
+        <p class="description">{{ $.Site.Params.description }}</p>
     {{- end -}}
+
+    <div class="flex-grid center">
+        {{ partial "links.html" . }}
+    </div>
+
+
 </header>
 {{ .Content }}
 
-{{ partial "menu_item.html" (dict "context" . "collection" $.Site.Data.menu.entries) }}
+<div class="vertical-pad"> </div>
+
+<div class="center">
+    <fieldset class="toc">
+        <legend class="postTitle">Menu</legend>
+        {{ partial "menu_item.html" (dict "context" . "collection" $.Site.Data.menu.entries) }}
+    </fieldset>
+</div>
 {{ end }}

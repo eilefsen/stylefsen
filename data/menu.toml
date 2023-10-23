@@ -1,27 +1,29 @@
+[[sosial_media]]
+title = "GitHub"
+url = "https://github.com/eilefsen"
+
+[[sosial_media]]
+title = "LinkedIn"
+url = "https://www.linkedin.com/in/emma-eilefsen-glenna-b56476278/"
+
+[[sosial_media]]
+title = "RSS"
+url = "index.xml"
+
 [[entries]]
-title = "Info"
-
-  [[entries.entries]]
-  title = "Sosial Media"
-
-      [[entries.entries.entries]]
-      title = "GitHub"
-      url = "https://github.com/eilefsen"
-
-      [[entries.entries.entries]]
-      title = "LinkedIn"
-      url = "https://www.linkedin.com/in/emma-eilefsen-glenna-b56476278/"
-
-  [[entries.entries]]
-  title = "RSS"
-  url = "index.xml"
+title = "About"
+url = "/about"
 
 [[entries]]
 title = "Posts by category"
 
   [[entries.entries]]
-  title = "Posts"
-  url = "posts"
+  title = "Code"
+  url = "code/"
+
+  [[entries.entries]]
+  title = "Photography"
+  url = "photography/"
 
 [[entries]]
 title = "All posts"

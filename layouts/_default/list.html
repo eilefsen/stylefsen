@@ -1,8 +1,13 @@
 {{ define "main" }}
 {{ partial "back_link.html" .}}
 
-<h1>{{ .Title }}</h1>
-
 {{ .Content }}
-{{ partial "post_list.html" (dict "context" . "section" .Section)}}
+
+<div class="vertical-pad"></div>
+
+<fieldset class="toc">
+    <legend class="postTitle">{{ .Title }}</legend>
+    {{ partial "post_list.html" (dict "context" . "section" .Section)}}
+</fieldset>
+
 {{ end }}

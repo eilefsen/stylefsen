@@ -29,9 +29,10 @@
     ordered = false
 
 [params]
-    description = "Dette er hjemmesiden til Emma Eilefsen Glenna"
+    description = "Hjemmesiden til Emma Eilefsen Glenna"
     [params.theme_config]
         appearance = "auto"
-        back_home_text = ".."
+        back_home_text = "/"
+        up_one_text = ".."
         date_format = "2006-01-02"
-        show_description = true
+        show_description = false

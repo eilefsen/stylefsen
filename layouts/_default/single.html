@@ -1,21 +1,31 @@
 {{ define "main" }}
 {{ partial "back_link.html" .}}
+<div style="float: right;">
+    {{ partial "links.html" . }}
+</div>
+
+<div class="vertical-pad"></div>
 
 <article>
-    <p class="post-meta">
-        <time datetime="{{ .Date }}">
-            {{ .Date | time.Format site.Params.theme_config.date_format }}
-        </time>
-    </p>
+    <fieldset class="content">
+        <legend class="postTitle">{{ .Title }}</legend>
+            
+        <div class="post-meta">
+            <time class="date" datetime="{{ .Date }}">
+                {{ .Date | time.Format site.Params.theme_config.date_format }}
+            </time>
+        </div>
 
-    <h1>{{ .Title }}</h1>
+        <div class="vertical-pad"></div>
 
-    {{ if .Params.toc }}
-        <aside {{ if .Params.tocBorder }} class="toc" {{ end }}>
-            {{ .TableOfContents }}
-        </aside>
-    {{ end }}
 
-    {{ .Content }}
+        {{ if .Params.toc }}
+            <aside {{ if .Params.tocBorder }} class="toc" {{ end }}>
+                {{ .TableOfContents }}
+            </aside>
+        {{ end }}
+
+        {{ .Content }}
+    </fieldset>
 </article>
 {{ end }}
