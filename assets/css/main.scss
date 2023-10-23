@@ -91,7 +91,7 @@ body {
     font-size: 24px;
     line-height: 1.4;
     min-height: 100%;
-    overflow-wrap: break-word;
+    overflow-wrap: normal;
 }
 
 .post-meta {
@@ -127,14 +127,12 @@ body {
 .content {
     @extend .round-border;
     padding: 1rem;
-    width: auto;
 }
 
 .toc {
     @extend .round-border;
     padding: 1rem;
     padding-bottom: 1.5rem;
-    width: auto;
 }
 
 .vertical-pad {
@@ -144,11 +142,13 @@ body {
 
 .center {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+	align-items: center;
 }
 
 .size {
     width: 37rem;
+    max-width: 60%;
 }
 
 .date {
@@ -172,6 +172,7 @@ h2, h3, h4, h5, h6 {
 p {
     @extend .vertical-pad;
     font-size: 1rem;
+    overflow-wrap: normal;
 }
 
 ul {
