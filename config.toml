@@ -29,7 +29,7 @@
     ordered = false
 
 [params]
-    description = "Hjemmesiden til Emma Eilefsen Glenna"
+    description = "Emma's Website"
     [params.theme_config]
         appearance = "auto"
         back_home_text = "/"
