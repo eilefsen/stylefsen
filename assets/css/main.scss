@@ -1,6 +1,7 @@
 $colorYellow: #F9D949;
 $colorRed: #F45050;
 $colorNavy: #3C486B;
+$colorDarkNavy: #2A324A;
 $colorLightNavy:  #6476a9;
 $colorLightestNavy:  #8593bb;
 $colorWhite: #F0F0F0;
@@ -13,6 +14,7 @@ $colorLight: $colorWhite;
 $colorLightDull: $colorDarkGrey;
 $colorDarkDull:  $colorLightestNavy;
 $colorDark: $colorNavy;
+$colorDarkest: $colorDarkNavy;
 $colorAccentLight: $colorYellow;
 $colorAccentDark: $colorRed;
 $colorAccentDark2: $colorDarkGreen;
@@ -34,11 +36,11 @@ a {
     }
 }
 pre {
-    background: $colorDark;
+    background: $colorLightGrey;
 }
 code {
-    background: $colorLight;
-    color: $colorDark;
+    background: $colorLightGrey;
+    color: $colorDarkest;
 }
 .date {
     color: $colorLightDull;
@@ -62,12 +64,11 @@ code {
         }
     }
     pre {
-        background: $colorLight;
+        background: $colorDarkest;
     }
     code {
-        background: $colorDark;
-        color: $colorLight;
-
+        background: $colorDarkest;
+        color: $colorLightGrey;
     }
     .date {
         color: $colorDarkDull;
@@ -101,7 +102,7 @@ body {
 }
 
 .head-links {
-    font-size: 1.5rem;
+    font-size: 2rem;
     flex-direction: row;
     justify-content: space-around;
 }
@@ -131,7 +132,7 @@ body {
 
 .toc {
     @extend .round-border;
-    padding: 1rem;
+    padding: 0.5rem;
     padding-bottom: 1.5rem;
 }
 
@@ -171,7 +172,7 @@ h2, h3, h4, h5, h6 {
 
 p {
     @extend .vertical-pad;
-    font-size: 1rem;
+    font-size: 1.2rem;
     overflow-wrap: normal;
 }
 
@@ -189,10 +190,6 @@ hr {
     &:after { content: attr(data-content) '/////' }
 }
 
-pre {
-    padding: 1em;
-    overflow-x: auto; /* Fix pre content overflowing parent without scroll bar */
-}
 
 table {
     width: 100%;
@@ -204,18 +201,24 @@ table, th, td {
     padding: 0.4rem;
 }
 
-code {
-    font-size: 80%;
-    padding: 0.1em 0.2em;
-    font-size: 90%;
+pre {
+    padding-left: 0.4rem;
+    padding-bottom: 0.2rem;
+    font-size: 0.3rem;
+    line-height: 1.4;
 }
 
-code.has-jax {
-    -webkit-font-smoothing: antialiased;
-    background: inherit !important;
-    border: none !important;
-    font-size: 100%;
+
+code {
+    padding: 0;
 }
+
+// code.has-jax {
+//     -webkit-font-smoothing: antialiased;
+//     background: inherit !important;
+//     border: none !important;
+//     font-size: 100%;
+// }
 
 blockquote {
     font-style: italic;

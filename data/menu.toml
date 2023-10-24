@@ -6,9 +6,9 @@ url = "https://github.com/eilefsen"
 title = "LinkedIn"
 url = "https://www.linkedin.com/in/emma-eilefsen-glenna-b56476278/"
 
-[[sosial_media]]
-title = "RSS"
-url = "index.xml"
+# [[sosial_media]]
+# title = "RSS"
+# url = "index.xml"
 
 [[entries]]
 title = "About"
